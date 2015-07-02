@@ -1,0 +1,597 @@
+
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+body {
+	font-size: 0px;
+}
+div {
+	font-size: 0px;
+}
+p {
+	margin: 0em;
+	word-spacing: normal;
+}
+h1 {
+	margin: 0em;
+	word-spacing: normal;
+}
+h2 {
+	margin: 0em;
+	word-spacing: normal;
+}
+h3 {
+	margin: 0em;
+	word-spacing: normal;
+}
+h4 {
+	margin: 0em;
+	word-spacing: normal;
+}
+h5 {
+	margin: 0em;
+	word-spacing: normal;
+}
+h6 {
+	margin: 0em;
+	word-spacing: normal;
+}
+form {
+	display: inline-block;
+}
+input {
+	box-sizing: border-box;
+}
+textarea {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
+.whitespacefix {
+	word-spacing: -1px;
+}
+@font-face {
+	font-family: "Redacted Script";
+	src: url('redacted-script-regular.eot');
+	src: url('redacted-script-regular.eot?#iefix') format('embedded-opentype'), url('redacted-script-regular.woff') format('woff'), url('redacted-script-regular.ttf') format('truetype'), url('redacted-script-regular.svg#RedactedScript') format('svg');
+	font-weight: 400;
+}
+#body {
+	background-color: rgb(255,255,255);
+}
+.cont {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	min-width: 1200px;
+	min-height: 204px;
+	position: relative;
+	z-index: 1;
+	margin-top: -1px;
+	border-top: 1px solid rgb(103,122,133);
+	border-bottom: 1px solid rgb(103,122,133);
+	border-radius: 4px;
+	background-color: rgb(184,200,210);
+}
+.section {
+	position: relative;
+	margin-top: 19px;
+	min-width: 1200px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-2 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 1099px;
+	width: 1099px;
+	min-height: 161px;
+	position: relative;
+	margin-left: 13px;
+	margin-top: 0px;
+}
+.colwrapper {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 300px;
+	width: 300px;
+	min-height: 161px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-3 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 300px;
+	width: 300px;
+	min-height: 161px;
+	position: relative;
+	z-index: 3;
+	margin-left: 0px;
+	margin-top: 0px;
+	height: 161px;
+}
+.img {
+	position: absolute;
+	left: 0;
+	width: 300px;
+	height: 161px;
+	top: 0;
+}
+.colwrapper-2 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 776px;
+	width: 776px;
+	min-height: 125px;
+	position: relative;
+	margin-left: 23px;
+	margin-top: 19px;
+	line-height: 0;
+}
+.cont-4 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 776px;
+	width: 776px;
+	min-height: 125px;
+	position: relative;
+	z-index: 4;
+	margin-left: 0px;
+	margin-top: 0px;
+	overflow: visible;
+}
+.para {
+	text-indent: 0;
+	padding-top: 3pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	text-align: left;
+}
+.font {
+	font-family: "Redacted Script";
+	font-size: 15.00pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	color: rgb(0,0,0);
+	line-height: 24.15pt;
+	letter-spacing: normal;
+}
+.cont-5 {
+	overflow: hidden;
+}
+.section-2 {
+	position: relative;
+	margin-top: 25px;
+	min-width: 1200px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-6 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 1175px;
+	width: 1175px;
+	min-height: 319px;
+	position: relative;
+	margin-left: 13px;
+	margin-top: 0px;
+	height: 319px;
+}
+.img-2 {
+	position: absolute;
+	left: 0;
+	width: 1175px;
+	height: 319px;
+	top: 0;
+}
+.cont-7 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 1173px;
+	width: 1173px;
+	min-height: 1005px;
+	position: relative;
+	margin-left: 15px;
+	margin-top: 24px;
+}
+.colwrapper-3 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 575px;
+	width: 575px;
+	min-height: 1005px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-8 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 575px;
+	width: 575px;
+	min-height: 1005px;
+	height: 1005px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	border: 0;
+	background-color: rgb(221,237,247);
+}
+.colwrapper-4 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 575px;
+	width: 575px;
+	min-height: 1005px;
+	position: relative;
+	margin-left: 23px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-9 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 575px;
+	width: 575px;
+	min-height: 1005px;
+	position: relative;
+	z-index: 2;
+	margin-left: 0px;
+	margin-top: 0px;
+	border: 0;
+	background-color: rgb(221,237,247);
+}
+.cont-10 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 375px;
+	width: 375px;
+	min-height: 667px;
+	position: relative;
+	z-index: 5;
+	margin-left: 116px;
+	margin-top: 183px;
+	height: 667px;
+}
+.img-3 {
+	position: absolute;
+	left: 0;
+	width: 375px;
+	height: 667px;
+	top: 0;
+}
+.cont-11 {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	min-width: 1200px;
+	min-height: 186px;
+	position: relative;
+	z-index: 6;
+	margin-top: 30px;
+	border-top: 1px solid rgb(103,122,133);
+	border-bottom: 1px solid rgb(103,122,133);
+	border-radius: 4px;
+	background-color: rgb(184,200,210);
+}
+.section-3 {
+	position: relative;
+	margin-top: 31px;
+	min-width: 1200px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-12 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 775px;
+	width: 775px;
+	min-height: 125px;
+	position: relative;
+	z-index: 8;
+	margin-left: 213px;
+	margin-top: 0px;
+	overflow: visible;
+}
+.para-2 {
+	text-indent: 0;
+	padding-top: 3pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	text-align: left;
+}
+.font-2 {
+	font-family: "Redacted Script";
+	font-size: 15.00pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	color: rgb(0,0,0);
+	line-height: 24.15pt;
+	letter-spacing: normal;
+}
+.cont-13 {
+	overflow: hidden;
+}
+@media (max-width:1199px) {
+#body {
+	background-color: rgb(255,255,255);
+}
+.cont {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	min-width: 960px;
+	min-height: 163px;
+	position: relative;
+	z-index: 1;
+	margin-top: -1px;
+	border-top: 1px solid rgb(103,122,133);
+	border-bottom: 1px solid rgb(103,122,133);
+	border-radius: 4px;
+	background-color: rgb(184,200,210);
+}
+.section {
+	position: relative;
+	margin-top: 15px;
+	min-width: 960px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-2 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 880px;
+	width: 880px;
+	min-height: 129px;
+	position: relative;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+.colwrapper {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 240px;
+	width: 240px;
+	min-height: 129px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-3 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 240px;
+	width: 240px;
+	min-height: 129px;
+	position: relative;
+	z-index: 3;
+	margin-left: 0px;
+	margin-top: 0px;
+	height: 129px;
+}
+.img {
+	position: absolute;
+	left: 0;
+	width: 240px;
+	height: 129px;
+	top: 0;
+}
+.colwrapper-2 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 621px;
+	width: 621px;
+	min-height: 100px;
+	position: relative;
+	margin-left: 19px;
+	margin-top: 15px;
+	line-height: 0;
+}
+.cont-4 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 621px;
+	width: 621px;
+	min-height: 100px;
+	position: relative;
+	z-index: 4;
+	margin-left: 0px;
+	margin-top: 0px;
+	overflow: visible;
+}
+.para {
+	text-indent: 0;
+	padding-top: 3pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	text-align: left;
+}
+.font {
+	font-family: "Redacted Script";
+	font-size: 12.00pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	color: rgb(0,0,0);
+	line-height: 19.32pt;
+	letter-spacing: normal;
+}
+.cont-5 {
+	overflow: hidden;
+}
+.section-2 {
+	position: relative;
+	margin-top: 20px;
+	min-width: 960px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-6 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 940px;
+	width: 940px;
+	min-height: 255px;
+	position: relative;
+	margin-left: 10px;
+	margin-top: 0px;
+	height: 255px;
+}
+.img-2 {
+	position: absolute;
+	left: 0;
+	width: 940px;
+	height: 255px;
+	top: 0;
+}
+.cont-7 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 938px;
+	width: 938px;
+	min-height: 804px;
+	position: relative;
+	margin-left: 12px;
+	margin-top: 19px;
+}
+.colwrapper-3 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 460px;
+	width: 460px;
+	min-height: 804px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-8 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 460px;
+	width: 460px;
+	min-height: 804px;
+	height: 804px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 0px;
+	border: 0;
+	background-color: rgb(221,237,247);
+}
+.colwrapper-4 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 460px;
+	width: 460px;
+	min-height: 804px;
+	position: relative;
+	margin-left: 18px;
+	margin-top: 0px;
+	line-height: 0;
+}
+.cont-9 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 460px;
+	width: 460px;
+	min-height: 804px;
+	position: relative;
+	z-index: 2;
+	margin-left: 0px;
+	margin-top: 0px;
+	border: 0;
+	background-color: rgb(221,237,247);
+}
+.cont-10 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 300px;
+	width: 300px;
+	min-height: 534px;
+	position: relative;
+	z-index: 5;
+	margin-left: 93px;
+	margin-top: 147px;
+	height: 534px;
+}
+.img-3 {
+	position: absolute;
+	left: 0;
+	width: 300px;
+	height: 534px;
+	top: 0;
+}
+.cont-11 {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	min-width: 960px;
+	min-height: 149px;
+	position: relative;
+	z-index: 6;
+	margin-top: 24px;
+	border-top: 1px solid rgb(103,122,133);
+	border-bottom: 1px solid rgb(103,122,133);
+	border-radius: 4px;
+	background-color: rgb(184,200,210);
+}
+.section-3 {
+	position: relative;
+	margin-top: 25px;
+	min-width: 960px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.cont-12 {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 620px;
+	width: 620px;
+	min-height: 100px;
+	position: relative;
+	z-index: 8;
+	margin-left: 170px;
+	margin-top: 0px;
+	overflow: visible;
+}
+.para-2 {
+	text-indent: 0;
+	padding-top: 3pt;
+	margin-top: 0pt;
+	margin-bottom: -3pt;
+	text-align: left;
+}
+.font-2 {
+	font-family: "Redacted Script";
+	font-size: 12.00pt;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	color: rgb(0,0,0);
+	line-height: 19.32pt;
+	letter-spacing: normal;
+}
+.cont-13 {
+	overflow: hidden;
+}
+}
+
