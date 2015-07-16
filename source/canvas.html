@@ -16,7 +16,7 @@
 <canvas id="canvas">
     该浏览器暂不支持canvas！
 </canvas>
-    </div>
+</div>
 <script>
 
     var canvas = document.getElementById("canvas");
@@ -305,8 +305,8 @@
         }
     }
 
-    function drawBarTime(){
-
+    function drawBarTime(cxt, time){
+        cxt.beginPath();
     }
 
     function drawEle(cxt, num){
