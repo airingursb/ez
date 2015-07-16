@@ -1,13 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>微信界面生成</title>
+    <link href="./css/css.css" rel="stylesheet" type="text/css"/>
+    <script src="./js/canvas.js"></script>
 </head>
 <body>
-Hello,github!
-Hello,HTML5!
 
---by Airing
+<div class="warp">
+    <div class="header">头部
+        <input id="lastBtn" type="button" value="提交" onclick="putMainView(context)">
+    </div>
+    <div class="mainBody">主体
+        <div class="left">主体信息输入
+            <div class="parameter">
+                    <label for="barTime">
+                        时间：
+                        <input id="barTime" type="text" value="请在此处输入时间" />
+                    </label>
+                    <br><br>
+                    <label for="signal">
+                        信号：
+                        <select id="signal">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                        </select>
+                    </label>
+                    <label for="electric">
+                        电量：
+                        <select id="electric">
+                            <option value="0%">0%</option>
+                            <option value="10%">10%</option>
+                            <option value="20%">20%</option>
+                            <option value="30%">30%</option>
+                            <option value="40%" selected="selected">40%</option>
+                            <option value="50%">50%</option>
+                            <option value="60%">60%</option>
+                            <option value="70%">70%</option>
+                            <option value="80%">80%</option>
+                            <option value="90%">90%</option>
+                            <option value="100%">100%</option>
+                        </select>
+                    </label>
+                    <br>
+                    <input type="button" value="提交" />
+                    <input type="reset" value="重置" />
+            </div>
+            <br>
+
+            <div class="message">
+                    <div class="profileme">我的头像</div>
+                    <div class="profileyou">对方的头像</div>
+                    <br><br>
+                    <label for="hisName">
+                        对方的名称：
+                        <input id="hisName" type="text" />
+                    </label>
+                    <input type="button" value="提交" onclick="putMainView(context)"/>
+                    <input type="reset" value="重置" />
+            </div>
+            <br>
+
+            <div class="chatrecord">
+                <!-- Chat1 -->
+                <label>
+                    <input name="chat1" type="checkbox" value="1" checked="checked"/>
+                    <select id="select1">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time1">
+                    时间（不显示就留空）:
+                    <input id="time1" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt1">
+                    内容：
+                    <textarea id="cnt1" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat2 -->
+                <label>
+                    <input name="chat2" type="checkbox" value="2" checked="checked"/>
+                    <select id="select2">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time2">
+                    时间（不显示就留空）:
+                    <input id="time2" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt2">
+                    内容：
+                    <textarea id="cnt2" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat3 -->
+                <label>
+                    <input name="chat3" type="checkbox" value="3" checked="checked"/>
+                    <select id="select3">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time3">
+                    时间（不显示就留空）:
+                    <input id="time3" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt3">
+                    内容：
+                    <textarea id="cnt3" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat4 -->
+                <label>
+                    <input name="chat4" type="checkbox" value="4" checked="checked"/>
+                    <select  id="select4">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time4">
+                    时间（不显示就留空）:
+                    <input id="time4" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt4">
+                    内容：
+                    <textarea id="cnt4" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat5 -->
+                <label>
+                    <input name="chat5" type="checkbox" value="5" checked="checked"/>
+                    <select  id="select5">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time5">
+                    时间（不显示就留空）:
+                    <input id="time5" type="text" value="老老实实填时间啦">
+                </label>
+                <label for="cnt5">
+                    内容：
+                    <textarea id="cnt5" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat6 -->
+                <label>
+                    <input name="chat6" type="checkbox" value="6" checked="checked"/>
+                    <select id="select6">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time6">
+                    时间（不显示就留空）:
+                    <input id="time6" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt6">
+                    内容：
+                    <textarea id="cnt6" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+                <br>
+
+                <!-- Chat7 -->
+                <label>
+                    <input name="chat7" type="checkbox" value="7" checked="checked"/>
+                    <select id="select7">
+                        <option value="我">我</option>
+                        <option value="对方">对方</option>
+                    </select>
+                </label>
+                <br>
+                <label for="time7">
+                    时间（不显示就留空）:
+                    <input id="time7" type="text" value="老老实实填时间啦" />
+                </label>
+                <label for="cnt7">
+                    内容：
+                    <textarea id="cnt7" rows="2" cols="2">该约约！该啥啥！</textarea>
+                </label>
+            </div>
+        </div>
+        <div class="right">主体界面显示
+            <div class="photo">生产图片区
+                <canvas id="canvas">
+                    该浏览器暂不支持canvas！
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="footer">版记</div>
+</div>
+<script>
+    var canvas = document.getElementById("canvas");
+    canvas.width = 375;
+    canvas.height = 667;
+    var context = canvas.getContext("2d");
+    putMainView(context);
+</script>
 </body>
 </html>
