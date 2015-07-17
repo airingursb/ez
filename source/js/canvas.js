@@ -131,9 +131,10 @@ function drawMyHead(cxt, head_y){
     cxt.fill();
     context.beginPath();
     var face1 = new Image();
-    face1.src = "./images/face1.png";
+    face1.src = document.getElementById("imgHead2").src;
+   // face1.src = "./images/face1.png";
     face1.onload = function(){
-        context.drawImage(face1, 10, head_y);
+        context.drawImage(face1, 10, head_y, 40, 40);
     }
 }
 
@@ -144,9 +145,10 @@ function drawHeHead(cxt, head_y){
     cxt.fill();
     context.beginPath();
     var face2 = new Image();
-    face2.src = "./images/face2.png";
+    face2.src = document.getElementById("imgHead1").src;
+    //face2.src = "./images/face2.png";
     face2.onload = function(){
-        context.drawImage(face2, 375 - 50, head_y);
+        context.drawImage(face2, 375 - 50, head_y, 40, 40);
     }
 }
 
@@ -198,7 +200,7 @@ function drawRight(cxt, y, str){
     var h = 40;
     cxt.font = "16px STHeitiSC-Light";
     var w = cxt.measureText(str).width + 15;
-    if (str.length > 13){
+    if (str.length > 13 && str.length <= 26){
         w = 230;
         h = h + 20;
     }else if (str.length > 26){
@@ -296,7 +298,7 @@ function getHisName(){
     return document.getElementById("hisName").value;
 }
 
-function putMainView(cxt){
+function test(cxt){
 
     mainView(cxt);
     //信息框
@@ -310,4 +312,49 @@ function putMainView(cxt){
     drawTimeMsg(context, 450, "星期六  17:59");
     drawRight(context, 480, "再见");
     drawLeft(context, 540, "再见");
+}
+
+function putContentView(cxt){
+    getHisName();
+    mainView(cxt);
+    var chk = new Array();
+    var dis = 0;
+    var len = 0;
+
+    for(var i = 1; i < 8; i++){
+        chk[i] = document.getElementById("check"+i);
+        if(chk[i].checked){
+            var player = document.getElementById("select"+i);
+            var index = player.selectedIndex;
+            var value = player.options[index].value;
+            var content = document.getElementById("cnt"+i).value;
+            var time = document.getElementById("time"+i);
+            if (i == 1) {
+                dis = 80;
+                len = 60;
+            } else {
+                dis = dis + len;
+            }
+            if (time.value != ""){
+                drawTimeMsg(cxt, dis, time.value);
+                dis = dis + 30;
+            }
+            if (value == "我"){
+                drawRight(cxt, dis, content);
+            } else {
+                drawLeft(cxt, dis, content);
+            }
+            if(content.length > 13 && content.length <=26){
+                len = 80;
+            } else if (content.length > 26 && content.length <= 35){
+                len = 100;
+            } else if (content.length >0 && content.length <= 13){
+                len = 60;
+            } else {
+                alert("对话框不能超过35个字符");
+            }
+        } else {
+            break;
+        }
+    }
 }
