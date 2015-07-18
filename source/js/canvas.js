@@ -315,6 +315,7 @@ function test(cxt){
 }
 
 function putContentView(cxt){
+    alert("你正在生成这张图片，不要拿去做坏事呀");
     getHisName();
     mainView(cxt);
     var chk = new Array();
