@@ -224,7 +224,7 @@ function drawLeftExp(cxt, y, img){
     var exp = new Image();
     exp.src = "./images/exp/"+ b + ".png";
     exp.onload = function(){
-        cxt.drawImage(exp, 70, y + 8);
+        cxt.drawImage(exp, 72, y + 10);
     };
     drawMyMsg(cxt, 61, y, 40, 35);
     drawMyHead(cxt, y);
@@ -236,7 +236,7 @@ function drawRightExp(cxt, y, img){
     var exp = new Image();
     exp.src = "./images/exp/"+ b + ".png";
     exp.onload = function(){
-        cxt.drawImage(exp, 375 - 95, y + 8);
+        cxt.drawImage(exp, 375 - 92, y + 10);
     };
     drawHeMsg(cxt, 375 - 61, y, 40, 35);
     drawHeHead(cxt, y);
@@ -348,7 +348,7 @@ function putContentView(cxt){
                 len = 80;
             } else if (content.length > 26 && content.length <= 35){
                 len = 100;
-            } else if (content.length >0 && content.length <= 13){
+            } else if (content.length >=0 && content.length <= 13){
                 len = 60;
             } else {
                 alert("对话框不能超过35个字符");
