@@ -5,7 +5,7 @@
     <title>微信界面生成</title>
     <link href="./css/css.css" rel="stylesheet" type="text/css"/>
     <script src="./js/canvas.js"></script>
-    <script src="js/loadImg.js"></script>
+    <script src="./js/loadImg.js"></script>
 </head>
 <body>
 
@@ -17,96 +17,64 @@
     <div class="mainBody">
         <div class="left">
                 <div class="parameter">
-                        <label for="barTime">
-                            时间：
-                            <input id="barTime" type="text" value="请在此处输入时间" />
-                        </label>
-
-                        <label for="signal" style="margin-left:70px">
-                            信号：
-                            <select id="signal">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected="selected">5</option>
-                            </select>
-                        </label>
-                        <label for="electric" style="margin-left:80px ">
-                            电量：
-                            <select id="electric">
-                                <option value="0%">0%</option>
-                                <option value="10%">10%</option>50
-                                <option value="20%">20%</option>
-                                <option value="30%">30%</option>
-                                <option value="40%" selected="selected">40%</option>
-                                <option value="50%">50%</option>
-                                <option value="60%">60%</option>
-                                <option value="70%">70%</option>
-                                <option value="80%">80%</option>
-                                <option value="90%">90%</option>
-                                <option value="100%">100%</option>
-                            </select>
-                        </label>
-                        <br>
+                    <p>几点注意：1、内容限长35字，2、内容和exp不会同时出现在对话框中，优先显示exp</p>
                 </div>
                 <br>
 
                 <div class="message">
-                        <div class="myProfile" style="float: left;">对方的头像
+                        <div class="myProfile" style="float: left;">我的头像
                             <div id="preview1">
-                                <img id="imgHead1" width="40" height="40" border=0 src="<%=request.getContextPath()%>/images/face2.jpg">
+                                <img id="imgHead1" width="40" height="40" border=0 src="<%=request.getContextPath()%>/images/face2.jpg"/>
                             </div>
                             <input type="file" onchange="previewImage1(this)" />
                         </div>
-                        <div class="hisProfile" style="margin-right: 10px;">我的头像
+                        <div class="hisProfile" style="margin-right: 10px;">对方的头像
                             <div id="preview2" >
-                                <img id="imgHead2" width="40" height="40" border=0 src="<%=request.getContextPath()%>/images/face1.jpg">
+                                <img id="imgHead2" width="40" height="40" border=0 src="<%=request.getContextPath()%>/images/face1.jpg"/>
                             </div>
                             <input type="file" onchange="previewImage2(this)" />
                         </div>
 
-                        <label for="hisName"">
+                        <label for="hisName">
                             对方的名称：
                             <input id="hisName" type="text" />
                         </label>
                 </div>
                 <br>
-                <div class="chatrecord">
+                <div class="chatRecord">
                     <!-- Chat1 -->
 
-                            <div class="chat">
-                            <label>
-                                <input id="check1" name="chat1" type="checkbox" value="1" />
+                    <div class="chat">
+                        <label>
+                            <input id="check1" name="chat1" type="checkbox" value="1" />
                                 <select id="select1">
                                     <option value="我">我</option>
                                     <option value="对方">对方</option>
                                 </select>
-                            </label>
+                        </label>
 
-                            <label for="time1" class="time">
-                                时间（不显示就留空）:
-                                <input id="time1" type="hidden" value="" />
-                            </label>
-                            <br><br>
-                            <label for="cnt1">
-                                内容：
-                                <textarea id="cnt1" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
-                            </label>
+                        <label for="time1" class="time">
+                            时间（不显示就留空）:
+                            <input id="time1" type="hidden" value="" />
+                        </label>
+                        <br><br>
+                        <label for="cnt1">
+                            内容：
+                            <textarea id="cnt1" rows="2" cols="25" maxlength="35"></textarea>
+                        </label>
 
-                            <div class="expression" id="ex1">
-                                <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                                <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
-                            </div>
-                           </div>
+                        <div class="expression" id="ex1">
+                            <img id="exp11" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(11)"/>
+                            <img id="exp12" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(12)"/>
+                            <img id="exp13" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(13)"/>
+                            <img id="exp14" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(14)"/>
+                            <img id="exp15" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(15)"/>
+                            <img id="exp16" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(16)"/>
+                            <img id="exp17" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(17)"/>
+                            <img id="exp18" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(18)"/>
+                            <img id="exp19" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(19)"/>
+                        </div>
+                    </div>
 
                     <br>
 
@@ -126,20 +94,19 @@
                         <br><br>
                         <label for="cnt2">
                             内容：
-                            <textarea id="cnt2" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                            <textarea id="cnt2" rows="2" cols="25" maxlength="35"></textarea>
                         </label>
 
                     <div class="expression" id="ex2">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
+                        <img id="exp21" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(21)"/>
+                        <img id="exp22" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(22)"/>
+                        <img id="exp23" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(23)"/>
+                        <img id="exp24" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(24)"/>
+                        <img id="exp25" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(25)"/>
+                        <img id="exp26" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(26)"/>
+                        <img id="exp27" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(27)"/>
+                        <img id="exp28" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(28)"/>
+                        <img id="exp29" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(29)"/>
                     </div>
                     </div>
                     <br>
@@ -162,19 +129,18 @@
                     <br><br>
                     <label for="cnt3">
                         内容：
-                        <textarea id="cnt3" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                        <textarea id="cnt3" rows="2" cols="25" maxlength="35"></textarea>
                     </label>
                     <div class="expression" id="ex3">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
+                        <img id="exp31" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(31)"/>
+                        <img id="exp32" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(32)"/>
+                        <img id="exp33" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(33)"/>
+                        <img id="exp34" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(34)"/>
+                        <img id="exp35" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(35)"/>
+                        <img id="exp36" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(36)"/>
+                        <img id="exp37" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(37)"/>
+                        <img id="exp38" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(38)"/>
+                        <img id="exp39" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(39)"/>
                     </div>
                     </div>
                     <br>
@@ -197,20 +163,19 @@
                     <br><br>
                     <label for="cnt4">
                         内容：
-                        <textarea id="cnt4" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                        <textarea id="cnt4" rows="2" cols="25" maxlength="35"></textarea>
 
                     </label>
                     <div class="expression" id="ex4">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
+                        <img id="exp41" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(41)"/>
+                        <img id="exp42" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(42)"/>
+                        <img id="exp43" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(43)"/>
+                        <img id="exp44" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(44)"/>
+                        <img id="exp45" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(45)"/>
+                        <img id="exp46" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(46)"/>
+                        <img id="exp47" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(47)"/>
+                        <img id="exp48" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(48)"/>
+                        <img id="exp49" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(49)"/>
                     </div>
                     </div>
 
@@ -234,19 +199,18 @@
                     <br><br>
                     <label for="cnt5">
                         内容：
-                        <textarea id="cnt5" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                        <textarea id="cnt5" rows="2" cols="25" maxlength="35"></textarea>
                     </label>
                     <div class="expression" id="ex5">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
+                        <img id="exp51" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(51)"/>
+                        <img id="exp52" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(52)"/>
+                        <img id="exp53" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(53)"/>
+                        <img id="exp54" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(54)"/>
+                        <img id="exp55" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(55)"/>
+                        <img id="exp56" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(56)"/>
+                        <img id="exp57" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(57)"/>
+                        <img id="exp58" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(58)"/>
+                        <img id="exp59" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(59)"/>
                     </div>
                     </div>
                     <br>
@@ -269,21 +233,19 @@
                     <br><br>
                     <label for="cnt6">
                         内容：
-                        <textarea id="cnt6" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                        <textarea id="cnt6" rows="2" cols="25" maxlength="35"></textarea>
 
                     </label>
                     <div class="expression"  id="ex6">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/8.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
-
+                        <img id="exp61" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(61)"/>
+                        <img id="exp62" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(62)"/>
+                        <img id="exp63" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(63)"/>
+                        <img id="exp64" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(64)"/>
+                        <img id="exp65" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(65)"/>
+                        <img id="exp66" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(66)"/>
+                        <img id="exp67" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(67)"/>
+                        <img id="exp68" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(68)"/>
+                        <img id="exp69" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(69)"/>
                     </div>
                     </div>
                     <br>
@@ -305,19 +267,18 @@
                     <br><br>
                     <label for="cnt7">
                         内容：
-                        <textarea id="cnt7" rows="2" cols="25" maxlength="35">该约约！该啥啥！</textarea>
+                        <textarea id="cnt7" rows="2" cols="25" maxlength="35"></textarea>
                     </label>
                     <div class="expression" id="ex7">
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/2.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/3.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/4.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/5.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/6.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/7.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/1.png" onclick=""/>
-                        <image alt="加载失败！" src="images/表情/9.png" onclick=""/>
-
+                        <img id="exp71" alt="加载失败！" src="images/exp/1.png" onclick="expClicked(71)"/>
+                        <img id="exp72" alt="加载失败！" src="images/exp/2.png" onclick="expClicked(72)"/>
+                        <img id="exp73" alt="加载失败！" src="images/exp/3.png" onclick="expClicked(73)"/>
+                        <img id="exp74" alt="加载失败！" src="images/exp/4.png" onclick="expClicked(74)"/>
+                        <img id="exp75" alt="加载失败！" src="images/exp/5.png" onclick="expClicked(75)"/>
+                        <img id="exp76" alt="加载失败！" src="images/exp/6.png" onclick="expClicked(76)"/>
+                        <img id="exp77" alt="加载失败！" src="images/exp/7.png" onclick="expClicked(77)"/>
+                        <img id="exp78" alt="加载失败！" src="images/exp/8.png" onclick="expClicked(78)"/>
+                        <img id="exp79" class="imgClicked" alt="加载失败！" src="images/exp/9.png" onclick="expClicked(79)"/>
                     </div>
 
                 </div>
@@ -327,11 +288,11 @@
 
         </div>
         <div class="middle">
-            <sapn class="line line-top"></sapn>
-            <sapn class="line line-left"></sapn>
-            <sapn class="line line-right"></sapn>
-            <sapn class="line line-bottom"></sapn>
-            <input id="makeUpBtn" type="button" value="生成" data="请点击生成"onclick="putContentView(context)"/>
+            <span class="line line-top"></span>
+            <span class="line line-left"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <input id="makeUpBtn" type="button" value="生成" onclick="putContentView(context)"/>
         </div>
 
         <div class="right">主体界面显示

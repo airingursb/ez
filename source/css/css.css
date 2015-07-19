@@ -17,7 +17,7 @@
 .header{
 			/*width:30%;
 			height:60px;
-			background:cornflowerblue;
+			background:cornFlowerBlue;
 			margin-bottom:20px;
             margin: 20px auto;
             border:2px solid;
@@ -76,7 +76,7 @@
                     border: 2px solid aquamarine;
                     border-radius: 3px;
                     -webkit-transition: all 1s ease;
-                    -moz-transition: all 1s eas;
+                    -moz-transition: all 1s ease;
                     -ms-transition: all 1s ease;
                     -o-transition: all 1s ease;
                     transition: all 1s ease;
@@ -152,3 +152,7 @@
 #imgHead1 {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
 #preview2{width:40px;height:40px;border:1px solid #000;overflow:hidden;}
 #imgHead2 {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
+
+.imgClicked{
+    border: 1px solid red;
+}

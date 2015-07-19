@@ -3,6 +3,12 @@
  */
 
 
+var flag_a = new Array(7);
+var flag_b = new Array(7);
+for(var i = 1; i < 8; i++){
+    flag_a[i] = 0;
+    flag_b[i] = 0;
+}
 function mainView(cxt){
 
     //屏幕
@@ -129,12 +135,12 @@ function drawMyHead(cxt, head_y){
     cxt.rect(10, head_y, 40, 40);
     cxt.fillStyle = "#ff6666";
     cxt.fill();
-    context.beginPath();
+    cxt.beginPath();
     var face1 = new Image();
     face1.src = document.getElementById("imgHead2").src;
    // face1.src = "./images/face1.png";
     face1.onload = function(){
-        context.drawImage(face1, 10, head_y, 40, 40);
+        cxt.drawImage(face1, 10, head_y, 40, 40);
     }
 }
 
@@ -143,12 +149,12 @@ function drawHeHead(cxt, head_y){
     cxt.rect(375 - 50, head_y, 40, 40);
     cxt.fillStyle = "#ff6666";
     cxt.fill();
-    context.beginPath();
+    cxt.beginPath();
     var face2 = new Image();
     face2.src = document.getElementById("imgHead1").src;
     //face2.src = "./images/face2.png";
     face2.onload = function(){
-        context.drawImage(face2, 375 - 50, head_y, 40, 40);
+        cxt.drawImage(face2, 375 - 50, head_y, 40, 40);
     }
 }
 
@@ -212,6 +218,30 @@ function drawRight(cxt, y, str){
     drawRightTxt(cxt, y, str);
 }
 
+function drawLeftExp(cxt, y, img){
+    cxt.beginPath();
+    var b = img % 10;
+    var exp = new Image();
+    exp.src = "./images/exp/"+ b + ".png";
+    exp.onload = function(){
+        cxt.drawImage(exp, 70, y + 8);
+    };
+    drawMyMsg(cxt, 61, y, 40, 35);
+    drawMyHead(cxt, y);
+}
+
+function drawRightExp(cxt, y, img){
+    cxt.beginPath();
+    var b = img % 10;
+    var exp = new Image();
+    exp.src = "./images/exp/"+ b + ".png";
+    exp.onload = function(){
+        cxt.drawImage(exp, 375 - 95, y + 8);
+    };
+    drawHeMsg(cxt, 375 - 61, y, 40, 35);
+    drawHeHead(cxt, y);
+}
+
 function drawLongText(cxt, begin_x, begin_y, lr, longtext){
     var text = "";
     var count = 0;
@@ -257,40 +287,6 @@ function drawTimeMsg(cxt, y, str){
     cxt.fillText(str, 188, y + 4);
 }
 
-function drawSignal(cxt, num){
-    cxt.beginPath();
-    cxt.strokeStyle = "white";
-    cxt.fillStyle = "white";
-    if (num == 4){
-        cxt.arc(29, 8.6, 2, 0, 2 * Math.PI);
-        cxt.stroke();
-        cxt.fill();
-    }else if(num == 5){
-        cxt.arc(29, 8.6, 2, 0, 2 * Math.PI);
-        cxt.arc(36, 8.6, 2, 0, 2 * Math.PI);
-        cxt.stroke();
-        cxt.fill();
-    }
-}
-
-function drawBarTime(cxt, time){
-    cxt.beginPath();
-}
-
-function drawEle(cxt, num){
-    cxt.beginPath();
-    cxt.rect(350, 8, 20, 10);
-    cxt.fillStyle = "red";
-    cxt.fill();
-
-}
-
-function drawStatusBar(){
-
-}
-
-
-
 /**
  *  按钮部分
  */
@@ -301,9 +297,6 @@ function getHisName(){
 function test(cxt){
 
     mainView(cxt);
-    //信息框
-    //   drawSignal(context, 5);
-    //   drawEle(context, 50);
     drawLeft(context, 80, "你好");
     drawRight(context, 140, "我很好，谢谢！");
     drawLeft(context, 200, "我正好十三个字你不要再数了");
@@ -318,7 +311,7 @@ function putContentView(cxt){
     alert("你正在生成这张图片，不要拿去做坏事呀");
     getHisName();
     mainView(cxt);
-    var chk = new Array();
+    var chk = new Array(7);
     var dis = 0;
     var len = 0;
 
@@ -340,11 +333,17 @@ function putContentView(cxt){
                 drawTimeMsg(cxt, dis, time.value);
                 dis = dis + 30;
             }
-            if (value == "我"){
+            if (value == "我" && flag_b[i] == 0){
                 drawRight(cxt, dis, content);
-            } else {
+            } else if (value == "对方" && flag_b[i] == 0){
                 drawLeft(cxt, dis, content);
+            } else if (value == "我" && flag_b[i] != 0){
+                drawRightExp(cxt, dis, flag_a[i]);
+            } else {
+                drawLeftExp(cxt, dis, flag_a[i]);
             }
+
+
             if(content.length > 13 && content.length <=26){
                 len = 80;
             } else if (content.length > 26 && content.length <= 35){
@@ -357,5 +356,25 @@ function putContentView(cxt){
         } else {
             break;
         }
+    }
+}
+
+
+function expClicked(id){
+    var img_a = id % 10;
+    var b = parseInt(id / 10);
+    var divImg = new Array(9);
+    for(var i = 1; i < 10;i++){
+        divImg[i] = document.getElementById("exp" + b + i);
+        divImg[i].className = "";
+    }
+    var image = document.getElementById("exp"+id);
+    image.className = "imgClicked";
+    if(img_a != 9){
+        flag_a[b] = id;
+        flag_b[b] = b;
+    }else{
+        flag_a[b] = 0;
+        flag_b[b] = 0;
     }
 }
