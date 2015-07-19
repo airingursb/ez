@@ -28,7 +28,7 @@
             font-family:Cursive,"微软雅黑",Georgia,Serif;
             font-style: normal;*/
             width: 50%;
-            height: 100px;
+            height: 60px;
             background:cornflowerblue;
             margin: 0 auto 20px;
             border-radius:20px;
@@ -59,7 +59,7 @@
 				background: #9cff46;
 			    width: 500px;
 
-                padding: 20px;
+                padding: 13px;
 				margin-left:40px;
                 border-radius:25px;
 				}/*主体左面输入部分*/
@@ -127,13 +127,14 @@
         }
 		.right{
 				float:right;
-                padding: 20px;
+                padding:20px 20px;
                 width: 500px;
-				background:#CCC;
+				background:#CCCCCC;
 				margin-right:40px;
                 border-radius:25px;
 				}/*主体右面显示部分*/
-			  .right.photo{
+			  .right .photo{
+                         margin: 100px auto;
 						 width: 380px;
 						 height: 670px;
 						 background:#CCCCCC;
@@ -142,10 +143,13 @@
 			
 	
 .footer{
-            clear:both;
-			background:#CCCCCC;
-			height:100px;
+            clear: both;
+            background:cornflowerblue;
+			height:50px;
 			margin-top:20px;
+            line-height:50px;
+            text-align: center;
+            font-style: normal;
 	}/*版记部分*/
 
 #preview1{width:40px;height:40px;border:1px solid #000;overflow:hidden;}
