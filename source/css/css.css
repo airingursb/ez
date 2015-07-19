@@ -2,21 +2,15 @@
 /* CSS Document */
 *{margin:0;padding:0;font-size:12px;font-weight:400;background:
 #FFF;font-style:italic; font-family: sans-serif;}
-/*
-主流电脑分辨率选用1280-1024
-包裹层选用 宽为1000px； 高为1200px;自动居中；
-头部选用 宽为1000px; 高为200px；
-主体选用  宽为1000px;高为800px;
-  左侧选用
-  右侧选用 生成图片：375x667；
-版记选用 宽为1000px;高为200px;
-*/
+
+
 
 .warp{
 		width:100%
-		height:1000px;
+        height:1000px;
 		margin:0 auto;
         background-color: navajowhite;
+
 }
 	 /*包裹层*/
 
@@ -64,10 +58,43 @@
 				float:left;
 				background: #9cff46;
 			    width: 500px;
+
                 padding: 20px;
 				margin-left:40px;
                 border-radius:25px;
 				}/*主体左面输入部分*/
+                .chat{
+
+                        border-bottom: 1px dashed  #9cff46;
+                }
+
+                .expression{
+                    float:right;
+                    clear:both;
+                    margin-right: 20px;
+                    padding:2px;
+                    border: 2px solid aquamarine;
+                    border-radius: 3px;
+                    -webkit-transition: all 1s ease;
+                    -moz-transition: all 1s eas;
+                    -ms-transition: all 1s ease;
+                    -o-transition: all 1s ease;
+                    transition: all 1s ease;
+
+                    }
+                .expression image:hover{
+                    background: gainsboro;
+                    -webkit-transform: rotate(360deg) scale(0.8);
+                    -moz-transform: rotate(360deg) scale(0.8);
+                    -ms-transform: rotate(360deg) scale(0.8);
+                    -o-transform: rotate(360deg) scale(0.8);
+                    transform: rotate(360deg) scale(0.8);
+
+                }
+                .time{
+                    margin-left: 170px;
+                }
+
 	    .middle{
              float:left;
              width:85px;
