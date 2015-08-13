@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;font-weight:400;background:#FFF;font-family: "微软雅黑";font-style: normal;}
+
+#header{
+    width: 100%;
+    height:800px;
+    text-align: center;
+
+    /*background: #00FF00 url(images/bg.jpg) no-repeat fixed top;*/
+   /* background-images: url(images/bg.jpg);*/
+
+
+}
+#headerText{
+    margin-top: -600px;
+    line-height: 100px;
+}
+#headerText h1{font-family: "微软雅黑";font-size: 50px;font-style: normal;}
+#headerText p{font-family: "微软雅黑";font-size: 25px;font-style: normal;}
+#headerText a{font-family: "微软雅黑";font-size: 20px;font-style: normal;}
+
+#input{
+    font-family: "微软雅黑";font-size: 15px;font-style: normal;
+
+}
+
+
+#input .message{
+
+    float: left;
+    padding: 10px 50px;
+    font-family: "微软雅黑";font-size: 15px;font-style: normal;
+    border-bottom:2px solid #576361;
+}
+#input .myProfile{
+    margin-top: 100px;
+}
+#input .hisProfile{
+    margin-top: 300px;
+}
+#input .chatRecord{
+    float: left;
+    border-left: 2px solid #576361;
+    padding: 10px 50px;
+    font-family: "微软雅黑";font-size: 15px;font-style: normal;
+}
+#input .generate{
+    width: 20%;
+    float: right;
+    height: 650px;
+    border-left: 2px solid #576361;
+    font-family: "微软雅黑";font-size: 15px;font-style: normal;
+    padding-left: 25px;
+}
+.parameter{
+    padding: 4px;
+    margin-top:20px;
+    padding-bottom: 20px;
+    border-bottom:2px solid #576361;
+}
+.Btn{
+    background-image: url(../images/bg1.jpg);
+    margin-left:-20px;
+    padding-bottom: 100px;
+    border-bottom:2px solid #576361;;
+}
+#makeUpBtn{
+    width:100px;
+    height: 250px;
+    background-color: navajowhite;
+    margin-left: 106px;
+    margin-top: 100px;
+    border-radius:20px;
+
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -ms-transition:0.2s ease;
+    -o-transition: 0.2s ease;
+    transition:0.2s ease;
+
+}
+#makeUpBtn:hover{
+    color: darkblue;
+    -webkit-transform: rotate(360deg) scale(1.8);
+    -moz-transform: rotate(360deg) scale(1.8);
+    -ms-transform: rotate(360deg) scale(1.8);
+    -o-transform: rotate(360deg) scale(1.8);
+    transform: rotate(360deg) scale(1.8);
+
+
+}
+#produce{
+    clear: both;
+    border-top:2px solid #576361;
+    background:cornflowerblue;
+}
+.Photo{
+    clear: both;
+    margin: 100px auto 0;
+    width:600px;
+    height: 800px;
+    background:#CCCCCC;
+    border-top:2px solid #576361;
+}
+.photo{
+    margin:0 auto;
+    width: 380px;
+    height: 670px;
+    background:#CCCCCC;
+
+}
+
+.footer{
+    clear: both;
+    background:cornflowerblue;
+    height:50px;
+    line-height:50px;
+    text-align: center;
+    font-style: normal;
+}/*版记部分*/
+
+.imgClicked{
+    border: 1px solid red;
+}
